@@ -1,90 +1,174 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
 
-		<title>Hello Pizza</title>
+<head>
+	<title>Hello Pizza</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Baloo|Reenie+Beanie|Roboto:400,500,500i" rel="stylesheet">
+</head>
 
-		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-	</head>
-	<body>
-		<header>
-			<div id="banner">
-				<h1>
-					<img src="img/logo-helloPizza.png" alt="Hello Pizza">
-				</h1>
+<body>
+	<header>
+		<div id="banner">
+			<h1>
+				<img src="img/logo-helloPizza.png" alt="Hello Pizza">
+			</h1>
 
-				<nav>
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Sabores</a></li>
-						<li><a href="#">Contato</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
+			<nav>
+				<ul>
+					<li><a href="#sabores-pizzas">Sabores</a></li>
+					<li><a href="#secao_pedido">Pedido</a></li>
+					<li><a href="#copyright">Contato</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<section>
+		<div id="sabores-pizzas">
+			<h2>Conheça os nossos sabores exclusivos de pizza</h2>
 
-		<section>
-			<div id="sabores-pizzas">
-				<h2>Conheça os nossos sabores exclusivos de pizza</h2>
+			<table>
+				<tr>
+					<th>Pizzas</th>
+					<th>Queijo e Molho</th>
+					<th>Salada</th>
+					<th>Carne</th>
+					<th>Azeite/Champignon</th>
+				</tr>
+				<tr>
+					<td>Mozzarella</td>
+					<td rowspan="6" class="texto-positivo">Sim</td>
+					<td class="texto-negativo">Não</td>
+					<td class="texto-negativo">Não</td>
+					<td class="texto-negativo">Não</td>
+				</tr>
+				<tr>
+					<td>Calabresa</td>
+					<td class="texto-negativo">Não</td>
+					<td class="texto-positivo">Sim</td>
+					<td class="texto-positivo">Sim</td>
+				</tr>
+				<tr>
+					<td>Pepperoni</td>
+					<td class="texto-negativo">Não</td>
+					<td class="texto-positivo">Sim</td>
+					<td class="texto-positivo">Sim</td>
+				</tr>
+				<tr>
+					<td>Marguerita</td>
+					<td class="texto-positivo">Sim</td>
+					<td class="texto-positivo">Sim</td>
+					<td class="texto-positivo">Sim</td>
+				</tr>
+				<tr>
+					<td>Portuguesa</td>
+					<td class="texto-positivo">Sim</td>
+					<td class="texto-positivo">Sim</td>
+					<td class="texto-positivo">Sim</td>
+				</tr>
+				<tr>
+					<td>Alho</td>
+					<td class="texto-negativo">Não</td>
+					<td class="texto-negativo">Não</td>
+					<td class="texto-negativo">Não</td>
+				</tr>
+			</table>
+		</div>
+	</section>
 
-				<table>
+	<section id="secao_pedido">
+		<h2>Pedido</h2>
+		<form name="pedido" action="http://arquivo.devmedia.com.br/projeto/requisicao.php" method="POST">
+			<table id="tabela-pedido">
+				<thead>
 					<tr>
-						<th>Pizzas</th>
-						<th>Queijo e Molho</th>
-						<th>Salada</th>
-						<th>Carne</th>
-						<th>Azeite/Champignon</th>
+						<th>Sabor</th>
+						<th>Quantidade</th>
+						<th>Preço por uni.</th>
 					</tr>
-					<tr>
-						<td>Mozzarella</td>
-						<td rowspan="6" class="texto-positivo">Sim</td>
-						<td class="texto-negativo">Não</td>
-						<td class="texto-negativo">Não</td>
-						<td class="texto-negativo">Não</td>
-					</tr>
-					<tr>
+				</thead>
+				<tbody>
+					<tr class="item">
 						<td>Calabresa</td>
-						<td class="texto-negativo">Não</td>
-						<td class="texto-positivo">Sim</td>
-						<td class="texto-positivo">Sim</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="calabresa">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">12.50</td>
 					</tr>
-					<tr>
+					<tr class="item">
+						<td>Mozzarella</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="mozzarella">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">11.50</td>
+					</tr>
+					<tr class="item">
 						<td>Pepperoni</td>
-						<td class="texto-negativo">Não</td>
-						<td class="texto-positivo">Sim</td>
-						<td class="texto-positivo">Sim</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="pepperoni">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">14.00</td>
 					</tr>
-					<tr>
+					<tr class="item">
 						<td>Marguerita</td>
-						<td class="texto-positivo">Sim</td>
-						<td class="texto-positivo">Sim</td>
-						<td class="texto-positivo">Sim</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="marguerita">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">13.00</td>
 					</tr>
-					<tr>
+					<tr class="item">
 						<td>Portuguesa</td>
-						<td class="texto-positivo">Sim</td>
-						<td class="texto-positivo">Sim</td>
-						<td class="texto-positivo">Sim</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="portuguesa">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">14.50</td>
 					</tr>
-					<tr>
+					<tr class="item">
 						<td>Alho</td>
-						<td class="texto-negativo">Não</td>
-						<td class="texto-negativo">Não</td>
-						<td class="texto-negativo">Não</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="alho">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">13.50</td>
 					</tr>
-				</table>
-			</div>
-		</section>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2">Total</td>
+						<td id="total">0</td>
+					</tr>
+				</tfoot>
+			</table>
+			<input id="botao-enviar" type="submit" value="enviar" />
+		</form>
+	</section>
+	
+	<footer>
+		<div id="copyright">
+			<a href="#" id="logo-hellopizza">
+				<img src="img/logo-helloPizza.png">
+			</a>
+			<p>Todos os direitos reservados &copy; 2018</p>
+			<p>(99) 9999-9999</p>
+		</div>
+	</footer>
 
-		<footer>
-			<div id="copyright">
-				<a href="#" id="logo-hellopizza">
-					<img src="img/logo-helloPizza.png">
-				</a>
+	<script src="app.js"></script>
+</body>
 
-				<p>Todos os direitos reservados &copy; 2018</p>
-			</div>
-		</footer>
-	</body>
 </html>
